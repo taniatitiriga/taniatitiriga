@@ -1,8 +1,6 @@
 ## Hi there 👋
 
-<p align="left"> <img src="https://img.shields.io/badge/Code-Python-informational?style=flat&logo=python&logoColor=white&color=brightgreen"> <img src="https://img.shields.io/badge/Code-Javascript-informational?style=flat&logo=javascript&logoColor=white&color=yellow"> <img src="https://img.shields.io/badge/Code-HTML-informational?style=flat&logo=html5&logoColor=white&color=orange"> <img src="https://img.shields.io/badge/Code-CSS-informational?style=flat&logo=css3&logoColor=white&color=blue"> <!-- Add more badges based on your stack --> </p>
-
-<div> <img align="left" src="https://github-readme-stats.vercel.app/api?username=yourusername&show_icons=true&theme=radical" alt="GitHub Stats" /> <img align="left" src="https://github-readme-streak-stats.herokuapp.com/?user=yourusername&theme=radical" alt="GitHub Streak Stats" /> </div>
+<p align="left"> <a href="https://www.linkedin.com/in/yourlinkedin"><img src="https://img.shields.io/badge/LinkedIn-informational?style=flat&logo=linkedin&logoColor=white&color=blue"></a> <a href="https://twitter.com/yourtwitter"><img src="https://img.shields.io/badge/Twitter-informational?style=flat&logo=twitter&logoColor=white&color=blue"></a> <a href="https://yourportfolio.com"><img src="https://img.shields.io/badge/Portfolio-informational?style=flat&logo=internet-explorer&logoColor=white&color=brightgreen"></a> </p>
 
 <!--
 **taniatitiriga/taniatitiriga** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
