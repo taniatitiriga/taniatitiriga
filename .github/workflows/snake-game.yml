@@ -1,0 +1,36 @@
+name: Generate Snake Game
+
+on:
+  schedule:
+    # Runs at 12:00 AM UTC every day
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  generate-snake-game:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Generate Snake Game
+        uses: Platane/snk@v2
+        with:
+          # Use the output format: svg
+          # Optional: Customize snake game settings, like snake speed
+          output: dist/github-contribution-grid-snake.svg
+
+      - name: Add Snake Game to README
+        run: |
+          mkdir -p dist
+          mv dist/github-contribution-grid-snake.svg .
+          echo "![GitHub Snake Game](github-contribution-grid-snake.svg)" >> README.md
+
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md github-contribution-grid-snake.svg
+          git commit -m "Updated snake game"
+          git push
