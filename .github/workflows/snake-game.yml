@@ -2,9 +2,9 @@ name: Generate Snake Game
 
 on:
   schedule:
-    # Runs at 12:00 AM UTC every day
+    # Runs every day at midnight (UTC)
     - cron: "0 0 * * *"
-  workflow_dispatch:
+  workflow_dispatch: # Allows you to trigger the workflow manually
 
 jobs:
   generate:
@@ -12,25 +12,27 @@ jobs:
 
     steps:
       # Step 1: Check out the repository
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Step 2: Generate the snake game files
+      # Step 2: Generate the snake game SVG
       - name: Generate Snake Game
         uses: Platane/snk@v3
         with:
           # GitHub username to fetch the contribution graph from
           github_user_name: ${{ github.taniatitiriga }}
 
-          # List of files to generate with customizable options
+          # List of files to generate (saved in the repository)
           outputs: |
             dist/github-snake.svg
-            dist/github-snake-dark.svg?palette=github-dark
-            dist/ocean.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
 
-      # Step 3: Upload the generated files to GitHub Pages
-      - name: Push Snake Game to GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v3
-        with:
-          target_branch: output
-          build_dir: dist
+      # Step 3: Commit and push the generated file back to the repository
+      - name: Commit and push the Snake Game
+        run: |
+          mkdir -p assets
+          mv dist/github-snake.svg assets/github-snake.svg
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/github-snake.svg
+          git commit -m "chore: update GitHub Snake Game"
+          git push
