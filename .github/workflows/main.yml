@@ -11,7 +11,7 @@ jobs:
       contents: write
     steps:
       # Snake Animation
-      - uses: Platane/snk@v3
+      - uses: Platane/snk@master
         id: snake-gif
   
         with:
