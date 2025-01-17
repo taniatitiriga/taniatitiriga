@@ -6,9 +6,6 @@
     <img align="center" src="https://github-readme-stats.vercel.app/api?username=taniatitiriga&show_icons=true&theme=dracula&include_all_commits=true&count_private=true&hide=issues"/>
 </div>
 
-<div>
- <br>
- ![Snake animation](https://github.com/taniatitiriga/taniatitiriga/blob/output/github-contribution-grid-snake.svg)
-</div>
+![Snake animation](https://github.com/taniatitiriga/taniatitiriga/blob/output/github-contribution-grid-snake.svg)
 
 
